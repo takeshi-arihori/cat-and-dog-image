@@ -32,17 +32,7 @@ const IndexPage: NextPage<Props> = ({ initialImageUrl }) => {
   // ローティング中でなければ、画像を表示する
   return (
     <div className={styles.page}>
-      <button onClick={handleClick}
-      style={{
-        backgroundColor: "#319795",
-        border: "none",
-        borderRadius: "4px",
-        color: "#fff",
-        padding: "4px 8px",
-      }}
-      >
-        今日のにゃんこ
-      </button>
+      <button onClick={handleClick} className={styles.button}>他のニャンコも見る</button>
       <div className={styles.frame}>
         {loading || <img src={imageUrl} className={styles.img} />}
       </div>
